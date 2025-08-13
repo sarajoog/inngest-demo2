@@ -3,9 +3,9 @@ import { inngest } from "@/inngest/client";
 const triggerInngestEvent = async () => {
   "use server"
   await inngest.send({
-    name: 'test/ticket.created',
+    name: 'on-ticket.create',
     data: {
-      message: 'I have just created a ticket'
+      ticketId: '4FIJFUHT1wGRvHDmxHEl',
     }
   });
 }
